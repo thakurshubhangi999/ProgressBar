@@ -1,0 +1,66 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: black;
+  }
+  
+  .progress-container {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .progress-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: conic-gradient(#4ba7d5 0%, #061728 100%); 
+    box-shadow: 6px 6px 10px -1px rgba(0,0,0,0.15) ;
+  }
+  
+  .progress-mask {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip: rect(0px, 100px, 200px, 0px);
+  }
+  
+  .progress-mask.full, .progress-fill {
+    clip: rect(0px, 100px, 200px, 0px);
+  }
+  
+  .progress-fill {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: white;
+    border-radius: 50%;
+  }
+  
+  .progress-inner-circle {
+    position: absolute;
+    top: 12%;
+    left: 12%;
+    width: 76%;
+    height: 76%;
+    background: black;
+    border-radius: 50%;
+    z-index: 1;
+  }
+  
+  .progress-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    z-index: 2;
+  }
+  
